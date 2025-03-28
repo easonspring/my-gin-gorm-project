@@ -4,10 +4,13 @@ import (
 	"log"
 	"os"
 
+	"github.com/easonspring/my-gin-gorm-project/models"
 	"github.com/joho/godotenv"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
+
+var DB *gorm.DB
 
 var Config struct {
 	ServerPort string
@@ -38,6 +41,12 @@ func InitDB() *gorm.DB {
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal("Failed to connect to database:", err)
+	}
+	// 初始化数据库脚本
+	DB = db
+	err = db.AutoMigrate(&models.User{})
+	if err != nil {
+		print("err:{}", err)
 	}
 	return db
 }
