@@ -1,7 +1,7 @@
 package repositories
 
 import (
-	"my-gin-gorm-project/models"
+	"github.com/easonspring/my-gin-gorm-project/models"
 
 	"gorm.io/gorm"
 )

@@ -1,8 +1,8 @@
 package services
 
 import (
-	"my-gin-gorm-project/models"
-	"my-gin-gorm-project/repositories"
+	"github.com/easonspring/my-gin-gorm-project/models"
+	"github.com/easonspring/my-gin-gorm-project/repositories"
 )
 
 // GetAllUsers 获取所有用户

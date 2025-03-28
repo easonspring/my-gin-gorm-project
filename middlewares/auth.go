@@ -1,9 +1,10 @@
 package middlewares
 
 import (
-	"my-gin-gorm-project/utils"
 	"net/http"
 	"strings"
+
+	"github.com/easonspring/my-gin-gorm-project/utils"
 
 	"github.com/gin-gonic/gin"
 )

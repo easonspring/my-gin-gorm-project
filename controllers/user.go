@@ -1,9 +1,10 @@
 package controllers
 
 import (
-	"my-gin-gorm-project/models"
-	"my-gin-gorm-project/services"
 	"net/http"
+
+	"github.com/easonspring/my-gin-gorm-project/models"
+	"github.com/easonspring/my-gin-gorm-project/services"
 
 	"github.com/gin-gonic/gin"
 )
